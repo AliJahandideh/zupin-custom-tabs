@@ -36,7 +36,7 @@
                 var respTabsId = $respTabs.attr('id');
                 $respTabs.find('ul.zup-tabs-list.' + options.tabidentify + ' li').addClass('zup-tab-item').addClass('zup-tab').addClass(options.tabidentify);
                 $respTabs.css({
-                    'display': 'block',
+                    'display': 'flex',
                     'width': jwidth
                 });
 

@@ -402,13 +402,15 @@ class Zup_Gallery_Tabs extends Widget_Base {
 		$tabs = $this->get_settings_for_display( 'tabs' );
 		$id_int = substr( $this->get_id_int(), 0, 3 );
 		$tabidentify_id = 'tab-' . $id_int;
+		$tabs_count = count($tabs);
+		$tabs_count_class = "has-" . $tabs_count . "-row";
 		$this->add_render_attribute( 'elementor-tabs', 'class', 'elementor-tabs' );
 
 		?>
 
-		<div id="<?php echo $tabidentify_id; ?>">
+		<div id="<?php echo $tabidentify_id; ?>" class="zup-gallery-tab-wrapper">
             
-			<ul class="zup-tabs-list <?php echo $tabidentify_id; ?>">
+			<ul class="zup-tabs-list <?php echo $tabidentify_id; ?> <?php echo $tabs_count_class; ?>">
 			<?php
 				foreach ( $tabs as $index => $item ) :
 					$tab_count = $index + 1;
@@ -493,6 +495,7 @@ class Zup_Gallery_Tabs extends Widget_Base {
 					scrollContainer.addEventListener('wheel', (evt) => {
 						evt.preventDefault();
 						scrollContainer.scrollLeft += evt.deltaY;
+						scrollContainer.scrollLeft += evt.deltaX;
 					});
 				}
 
