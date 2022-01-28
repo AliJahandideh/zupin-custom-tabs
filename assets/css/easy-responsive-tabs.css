@@ -1,0 +1,312 @@
+.zup-vertical-tabs {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.zup-vertical-tabs:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+ul.zup-tabs-list,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.zup-tabs-list li {
+  font-weight: 600;
+  font-size: 13px;
+  padding: 13px 15px;
+  margin: 0 4px 0 0;
+  list-style: none;
+  cursor: pointer;
+  float: left;
+}
+
+.zup-tabs-container {
+  padding: 0px;
+  background-color: #fff;
+  clear: left;
+}
+
+h2.zup-accordion {
+  cursor: pointer;
+  padding: 5px;
+  display: none;
+}
+
+.zup-tab-content {
+  display: none;
+  padding: 20px;
+}
+
+.zup-tab-active {
+  
+}
+
+.zup-tab-active {
+  border-bottom: none;
+  background-color: #fff;
+}
+
+.zup-content-active,
+.zup-accordion-active {
+  display: block;
+}
+
+.zup-tab-content {
+  border: 1px solid #c1c1c1;
+  border-top-color: #5ab1d0;
+}
+
+h2.zup-accordion {
+  font-size: 13px;
+  margin: 0px;
+  padding: 30px;
+  border: 0;
+}
+
+h2.zup-tab-active {
+  border-bottom: 0px solid #c1c1c1 !important;
+  margin-bottom: 0px !important;
+  padding: 30px;
+}
+
+h2.zup-tab-title:last-child {
+  border-bottom: 12px solid #c1c1c1 !important;
+  background: blue;
+}
+
+/*-----------Vertical tabs-----------*/
+.zup-vertical-tabs ul.zup-tabs-list {
+  float: left;
+  width: 30%;
+}
+
+.zup-vertical-tabs .zup-tabs-container {
+  padding: 0px;
+  background-color: #111;
+  border: 0 !important;
+  float: left;
+  width: 70%;
+  min-height: 250px;
+  border-radius: 4px;
+  clear: none;
+}
+
+.zup-vertical-tabs .zup-tab-content {
+  background: #111111;
+  border: none;
+  word-wrap: break-word;
+}
+
+.zup-vertical-tabs .zup-tab-content .zup-gallery-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: start;
+}
+
+.zup-vertical-tabs .zup-tab-content .zup-gallery-images {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 20%;
+  grid-template-rows: 20% 20% 20%;
+  gap: 20px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.zup-vertical-tabs .zup-tab-content .zup-gallery-images img {
+  display: block;
+  width: 100%;
+}
+.zup-tab-content .zup-gallery-wrapper .shadow {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  width: 200px;
+  height: 100%;
+  pointer-events: none;
+}
+.zup-tab-content .zup-gallery-wrapper .shadow-left {
+  left: 0;
+  background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent);
+  opacity: 0;
+}
+.zup-tab-content .zup-gallery-wrapper .shadow-right {
+  right: 0;
+  background: -webkit-linear-gradient(-90deg, rgba(0, 0, 0, 0.75), transparent);
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.75), transparent);
+}
+.zup-vertical-tabs li.zup-tab-active {
+  position: relative;
+  background: #111 !important;
+  border: 0 !important;
+  z-index: 1;
+}
+.zup-vertical-tabs .zup-tabs-list li {
+  display: block;
+  padding: 50px;
+  margin: 0;
+  cursor: pointer;
+  float: none;
+}
+.zup-tabs-container .zup-accordion .tab-title,
+.zup-tabs-list li .tab-title {
+  position: relative;
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #000;
+  transition: all 0.1s;
+}
+.zup-slider-tab-wrapper .zup-tab-item.zup-tab-active .tab-title {
+  font-size: 50px;
+}
+.zup-slider-tab-wrapper .zup-tab-item.zup-tab-active .tab-title span::before {
+  content: "";
+  bottom: 12px;
+  right: -30px;
+  left: inherit;
+  width: 90px;
+  height: 14px;
+  background: red;
+  z-index: -1;
+}
+.zup-tabs-container .zup-accordion.zup-tab-active .tab-title span,
+.zup-tabs-list li.zup-tab-active .tab-title,
+.zup-tabs-list li.zup-tab-active .tab-title span {
+  color: #fff;
+}
+.zup-tabs-container .zup-accordion .tab-title span,
+.zup-tabs-list li .tab-title span {
+  position: relative;
+}
+.zup-tabs-container .zup-accordion .tab-title span::before,
+.zup-tabs-list li .tab-title span::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: -14px;
+  width: 8px;
+  height: 11px;
+  background: red;
+}
+.zup-tabs-container .zup-accordion.zup-tab-active .tab-subtitle,
+.zup-tabs-list li.zup-tab-active .tab-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  font-weight: 400;
+}
+.zup-arrow {
+  width: 0;
+  height: 0;
+  float: right;
+  margin-top: 8px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #aaa;
+}
+
+h2.zup-tab-active span.zup-arrow {
+  border: none;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid #ccc;
+}
+
+/*-----------Accordion styles-----------*/
+h2.zup-tab-active {
+  background: #dbdbdb; /* !important;*/
+}
+
+.zup-easy-accordion h2.zup-accordion {
+  display: block;
+}
+
+.zup-easy-accordion .zup-tab-content {
+  border: 1px solid #c1c1c1;
+}
+
+.zup-easy-accordion .zup-tab-content:last-child {
+  border-bottom: 1px solid #c1c1c1; /* !important;*/
+}
+
+.zup-jfit {
+  width: 100%;
+  margin: 0px;
+}
+
+.zup-tab-content-active {
+  display: block;
+}
+
+/*Here your can change the breakpoint to set the accordion, when screen resolution changed*/
+@media only screen and (max-width: 992px) {
+  .elementor .elementor-inner .elementor-element .zup-tabs-list .elementor-tab-title {
+    padding: 40px !important;
+  }
+
+  .elementor .elementor-inner .zup-slider-tab-wrapper .zup-tab-item.zup-tab-active .tab-title {
+    font-size: 35px !important;
+  }
+  
+}
+
+@media only screen and (max-width: 768px) {
+  ul.zup-tabs-list {
+    display: none;
+  }
+
+  h2.zup-accordion {
+    display: block;
+  }
+
+  .zup-vertical-tabs .zup-tabs-container {
+    border: none;
+    float: none;
+    width: 100% !important;
+    min-height: 100px;
+    clear: none;
+  }
+
+  .zup-accordion-closed {
+    display: none !important;
+  }
+
+  .zup-vertical-tabs .zup-tab-content:last-child {
+    border-bottom: 1px solid #c1c1c1 !important;
+  }
+
+  .zup-vertical-tabs .zup-tab-content .zup-gallery-images {
+    grid-auto-columns: 33.3333%;
+    grid-template-rows: 33.3333% 33.3333% 33.3333%;
+    gap: 20px;
+  }
+  .zup-tab-content .zup-gallery-wrapper .shadow {
+    width: 100px;
+  }
+
+  .zup-tabs-container .zup-accordion .tab-title, .zup-tabs-list li .tab-title {
+    font-size: 22px;
+  }
+
+  .zup-tab-content {
+    padding-top: 0 !important;
+  }
+
+}
+
+@media only screen and (max-width: 576px) {
+  .zup-vertical-tabs .zup-tab-content .zup-gallery-images {
+    grid-auto-columns: 50%;
+    grid-template-rows: 50% 50%;
+    gap: 20px;
+  }
+}
