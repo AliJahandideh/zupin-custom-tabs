@@ -232,6 +232,13 @@ h2.zup-tab-title:last-child {
   font-size: 14px;
   font-weight: 400;
 }
+.zup-tabs-container .zup-gallery-images .image-caption {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
+}
 .zup-arrow {
   width: 0;
   height: 0;

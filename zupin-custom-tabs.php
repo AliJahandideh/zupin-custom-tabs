@@ -7,7 +7,7 @@
  * Plugin Name: Zupin Custom Tabs
  * Description: Customized elementor tabs to display galleries and sliders
  * Plugin URI:  https://zupin.dev
- * Version:     1.0.0
+ * Version:     1.1.0
  * Author:      Ali Jahandideh
  * Author URI:  https://zupin.dev
  * Text Domain: zup-widgets

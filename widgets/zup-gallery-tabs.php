@@ -387,6 +387,25 @@ class Zup_Gallery_Tabs extends Widget_Base {
 			]
 		);
 
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'subtitle_image_caption',
+				'label' => esc_html__( 'Caption Typography', 'zup-widgets' ),
+				'selector' => '{{WRAPPER}} .zup-gallery-images .image-caption',
+			]
+		);
+		$this->add_control(
+			'image_caption_color',
+			[
+				'label' => esc_html__( 'Caption Color', 'zup-widgets' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					 '{{WRAPPER}} .zup-gallery-images .image-caption' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
 		$this->end_controls_section();
 	}
 
@@ -461,8 +480,14 @@ class Zup_Gallery_Tabs extends Widget_Base {
 							<div class="zup-gallery-images">
 								<?php
 								foreach ( $item['tab_gallery'] as $image ) {
+
+									$attachment_image = wp_get_attachment_image( $image['id'], 'zup-md');
+									$attachment_image_caption = wp_get_attachment_caption( $image['id']);
+									$attachment_image_caption_html = ( $attachment_image_caption ) ? sprintf( '<div class="image-caption"> %s </div>', $attachment_image_caption ) : '';
+
 									echo '<a href="'. esc_attr( $image['url'] ) .'" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="'. $slideshow_id .'">';
-									echo wp_get_attachment_image( $image['id'], 'zup-md');
+									echo $attachment_image;
+									echo $attachment_image_caption_html;
 									echo '</a>';
 								}
 								?>
